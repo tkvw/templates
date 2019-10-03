@@ -11,6 +11,14 @@
     "templates",
     "javascript"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkvw/templates.git",
+    "directory": "packages/templates-js"
+  },
   "author": "Dennie de Lange",
   "license": "MIT",
   "devDependencies": {

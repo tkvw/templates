@@ -12,6 +12,14 @@
     "clean": "trash dist",
     "test": "jest"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkvw/templates.git",
+    "directory": "packages/templates"
+  },
   "author": "Dennie de Lange",
   "license": "MIT",
   "dependencies": {

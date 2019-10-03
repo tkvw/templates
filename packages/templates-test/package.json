@@ -1,7 +1,7 @@
 {
   "name": "@tkvw/templates-test",
   "version": "1.0.1",
-  "description": "",
+  "description": "Test utility for testing templates",
   "main": "dist/main/index.js",
   "scripts": {
     "build": "run-s clean && run-p build:*",
@@ -9,7 +9,15 @@
     "clean": "trash dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dennie de Lange",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkvw/templates.git",
+    "directory": "packages/templates-test"
+  },
   "license": "ISC",
   "dependencies": {
     "@tkvw/templates": "file:../templates",
