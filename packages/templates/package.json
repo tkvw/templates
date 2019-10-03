@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "description": "Tkvw templating starters",
   "bin": {
-    "gen": "dist/main/bin.js"
+    "tkvw-template": "dist/main/bin.js"
   },
   "main": "dist/main/index.js",
   "scripts": {
