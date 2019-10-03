@@ -1,6 +1,6 @@
 {
   "name": "@tkvw/templates",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tkvw templating starters",
   "bin": {
     "gen": "dist/main/bin.js"

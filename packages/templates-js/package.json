@@ -1,6 +1,6 @@
 {
   "name": "@tkvw/templates-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Javascript templates repository",
   "main": "index.js",
   "scripts": {
