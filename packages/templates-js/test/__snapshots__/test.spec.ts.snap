@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` js gatsby plugin with name only: with name only 1`] = `
+"{
+  \\"name\\": \\"dennie\\",
+  \\"publishConfig\\": {
+    \\"access\\": \\"public\\"
+  },
+  \\"version\\": \\"0.0.1\\",
+  \\"description\\": \\"// TODO add a plugin description\\",
+  \\"homepage\\": \\"// TODO https://github.com/tkvw/dennie\\",
+  \\"main\\": \\"index.js\\",
+  \\"scripts\\": {
+    \\"clean\\": \\"rm -rf ./dist\\",
+    \\"build\\": \\"npm run clean && tsc -p ./tsconfig.build.json && cp ./package.json ./dist\\",
+    \\"deploy\\": \\"npm run build && cd dist && npm publish\\"
+  },
+  \\"keywords\\": [\\"gatsby\\", \\"gatsby-plugin\\", \\"// TODO: Please enter additional keywords here\\"],
+  \\"author\\": \\"Dennie de Lange\\",
+  \\"license\\": \\"// TODO: Enter license type\\",
+  \\"peerDependencies\\": {
+    \\"gatsby\\": \\"*\\"
+  },
+  \\"devDependencies\\": {
+    \\"gatsby\\": \\"*\\"
+  }
+}
+"
+`;
+
+exports[` js monorepo with name only: with name only 1`] = `
+"{
+  \\"private\\": true,
+  \\"name\\": \\"dennie\\",
+  \\"scripts\\": {
+    \\"clean\\": \\"lerna clean\\",
+    \\"bootstrap\\": \\"lerna bootstrap\\",
+    \\"test\\": \\"CI=true lerna run test --stream\\",
+    \\"start\\": \\"lerna run --parallel start\\",
+    \\"prepare\\": \\"lerna run prepare\\",
+    \\"build\\": \\"npm run prepare && lerna run --parallel build\\"
+  },
+  \\"devDependencies\\": {
+    \\"lerna\\": \\"*\\"
+  },
+  \\"workspaces\\": [\\"packages/*\\"],
+  \\"lint-staged\\": {
+    \\"*.{ts,tsx,js,jsx}\\": [\\"eslint --fix\\", \\"git add\\"]
+  },
+  \\"husky\\": {
+    \\"hooks\\": {
+      \\"pre-commit\\": \\"lint-staged\\"
+    }
+  }
+}
+"
+`;
+
+exports[` js test jest unit simple test: simple test 1`] = `
+"import another from \\"./another\\";
+
+describe('another', () => {
+  it(\\"should succeed\\", async () => {
+    // TODO: Add test
+  })
+})
+"
+`;

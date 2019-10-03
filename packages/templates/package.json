@@ -1,0 +1,22 @@
+{
+  "name": "@tkvw/templates",
+  "version": "1.0.0",
+  "description": "Tkvw templating starters",
+  "bin": {
+    "gen": "dist/main/bin.js"
+  },
+  "main": "dist/main/index.js",
+  "scripts": {
+    "build": "run-s clean && run-p build:*",
+    "build:main": "tsc -p ./tsconfig.build.json",
+    "clean": "trash dist",
+    "test": "jest"
+  },
+  "author": "Dennie de Lange",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "handlebars": "^4.4.0",
+    "tmp-promise": "^2.0.2"
+  }
+}

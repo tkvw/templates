@@ -1,0 +1,19 @@
+{
+  "name": "@tkvw/templates-js",
+  "version": "1.0.0",
+  "description": "Javascript templates repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "tkvw",
+    "templates",
+    "javascript"
+  ],
+  "author": "Dennie de Lange",
+  "license": "MIT",
+  "devDependencies": {
+    "@tkvw/templates-test": "file:../templates-test"
+  }
+}

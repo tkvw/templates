@@ -1,0 +1,83 @@
+{
+  "name": "@tkvw/templates",
+  "version": "1.0.0",
+  "description": "Template driven starters",
+  "main": "lib/main/runner.js",
+  "typings": "lib/main/runner.d.ts",
+  "module": "lib/module/runner.js",
+  "bin": {
+    "gen": "lib/es6/bin.js"
+  },
+  "scripts": {
+    "build": "lerna run build",
+    "clean": "trash lib generated",
+    "fix": "run-s fix:*",
+    "fix:prettier": "prettier \"{src/**/*.{t,j}s,test/*.{t,j}s,_templates/**/*.{t,j}s,*.{t,j}s}\" --write",
+    "fix:eslint": "eslint --fix \"{src/**/*.ts,test/*.ts,_templates/**/*.{t,j}s}\"",
+    "watch": "tsc -p ./tsconfig.build.es6.json -w",
+    "lint": "run-s lint:*",
+    "lint:eslint": "eslint \"./packages/*/src/**/*.ts\"",
+    "lint:prettier": "prettier \"{src/**/*.{t,j}s,test/*.{t,j}s,_templates/**/*.{t,j}s,*.{t,j}s}\" --list-different",
+    "test": "run-s build test:*",
+    "test:lint": "run-s lint:*",
+    "test:unit": "lerna run test"
+  },
+  "keywords": [
+    "tkvw",
+    "generator",
+    "templates"
+  ],
+  "author": "Dennie de Lange",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/config-lerna-scopes": "^8.2.0",
+    "@tkvw/templates-test": "file:../templates-test",
+    "@types/ejs": "^2.6.3",
+    "@types/fs-extra": "^8.0.0",
+    "@types/jest": "^24.0.18",
+    "@types/minimist": "^1.2.0",
+    "@types/node": "^12.7.2",
+    "@types/tmp": "^0.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "dir-compare": "^1.7.3",
+    "enquirer": "^2.3.1",
+    "eslint": "^6.5.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "fast-glob": "^3.0.4",
+    "fs-extra": "^8.1.0",
+    "husky": "^3.0.7",
+    "jest": "^24.9.0",
+    "lerna": "^3.13.4",
+    "np": "^5.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "semantic-release-cli": "^5.2.1",
+    "trash-cli": "^3.0.0",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.19.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "@tkvw/templates": "file:packages/templates",
+    "@tkvw/templates-js": "file:packages/templates-js",
+    "@tkvw/templates-test": "file:packages/templates-test"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-lerna-scopes",
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKEY_GIT_PARAMS"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "<%= name %>",
+  "scripts": {
+    "clean": "lerna clean",
+    "bootstrap": "lerna bootstrap",
+    "test": "CI=true lerna run test --stream",
+    "start": "lerna run --parallel start",
+    "prepare": "lerna run prepare",
+    "build": "npm run prepare && lerna run --parallel build"
+  },
+  "devDependencies": {
+    "lerna": "*"
+  },
+  "workspaces": ["packages/*"],
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": ["eslint --fix", "git add"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

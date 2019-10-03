@@ -1,0 +1,2 @@
+# Templated starters library
+

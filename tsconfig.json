@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "baseUrl": "./packages",
+    "paths": {
+      "@tkvw/templates": ["templates/src"],
+      "@tkvw/templates-test": ["templates-test/src"]
+    }
+  }
+}
