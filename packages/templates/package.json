@@ -25,8 +25,11 @@
   "dependencies": {
     "ejs": "^2.7.1",
     "enquirer": "^2.3.2",
+    "execa": "^2.0.4",
+    "fast-glob": "^3.0.4",
     "fs-extra": "^8.1.0",
     "handlebars": "^4.4.0",
+    "minimist": "^1.2.0",
     "tmp-promise": "^2.0.2"
   }
 }
