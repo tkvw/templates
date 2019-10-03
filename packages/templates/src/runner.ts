@@ -1,4 +1,4 @@
-import * as path from 'path';
+import path from 'path';
 import enquirer from 'enquirer';
 import pm from 'minimist';
 import fg from 'fast-glob';
@@ -8,6 +8,7 @@ import { createDefaultConfig, Config, CommandConfig } from './config';
 import fs from 'fs';
 import { compose } from './utils';
 import { Processor } from './processors';
+import assert from "assert";
 
 const PLUGIN_FILENAME = 'tkvw.template.js';
 
@@ -133,7 +134,7 @@ const findTemplateFolderFromCommands = async (config: { commands: string[]; temp
 
 export default async (commandArgs: any[], configOverrides?: Partial<CommandConfig>) => {
   const config = await createDefaultConfig(pm(commandArgs), configOverrides);
-
+  assert(config.templateFolderOptions.length > 0, "No template folders found, please create a template folder first")
   const { templateFolder, commands } = await findTemplateFolderFromCommands(config);
   config.commands = commands;
   return runCommand(templateFolder, config);
