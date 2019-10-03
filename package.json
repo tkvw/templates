@@ -20,7 +20,9 @@
     "lint:prettier": "prettier \"{src/**/*.{t,j}s,test/*.{t,j}s,_templates/**/*.{t,j}s,*.{t,j}s}\" --list-different",
     "test": "run-s build test:*",
     "test:lint": "run-s lint:*",
-    "test:unit": "lerna run test"
+    "test:unit": "lerna run test",
+    "version":"lerna version --conventional-commits --create-release github",
+    "publish": "lerna publish"
   },
   "keywords": [
     "tkvw",
@@ -77,7 +79,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKEY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }

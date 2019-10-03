@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  test_node_8:
+  build:
     docker:
       - image: circleci/node:8
     steps:
@@ -20,36 +20,3 @@ jobs:
       - run:
           name: Run all tests
           command: yarn run test
-  release:
-    docker:
-      - image: circleci/node:8
-    steps:
-      - checkout
-      - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
-      - run:
-          name: Install dependencies
-          command: yarn install --frozen-lockfile
-      - save_cache:
-          name: Save Yarn package cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
-      - run:
-          name: Run build scripts
-          command: yarn run build
-      - run:
-          name: Run Semantic release
-          command: yarn run semantic-release
-
-workflows:
-  version: 2
-  test_and_release:
-    # Run the test jobs first, then the release only when all the test jobs are successful
-    jobs:
-      - test_node_8
-      - release:
-          requires:
-            - test_node_8
