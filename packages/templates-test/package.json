@@ -1,6 +1,6 @@
 {
   "name": "@tkvw/templates-test",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Test utility for testing templates",
   "main": "dist/main/index.js",
   "scripts": {
