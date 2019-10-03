@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/tkvw/templates/compare/v1.0.4...v2.0.0) (2019-10-03)
+
+
+### Code Refactoring
+
+* **templates:** changed binary gen to tkvw-template ([f621ef9](https://github.com/tkvw/templates/commit/f621ef9))
+
+
+### BREAKING CHANGES
+
+* **templates:** Binary renamed from "gen" to "tkvw-template"
+
+
+
+
+
 ## [1.0.4](https://github.com/tkvw/templates/compare/v1.0.3...v1.0.4) (2019-10-03)
 
 
