@@ -1,6 +1,6 @@
 {
   "name": "@tkvw/templates-js",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Javascript templates repository",
   "bin": {
     "tkvw-templates-js": "dist/main/bin.js"
