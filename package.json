@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "lerna run build",
-    "clean": "trash lib generated",
+    "clean": "lerna run clean",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"{src/**/*.{t,j}s,test/*.{t,j}s,_templates/**/*.{t,j}s,*.{t,j}s}\" --write",
     "fix:eslint": "eslint --fix \"{src/**/*.ts,test/*.ts,_templates/**/*.{t,j}s}\"",
@@ -22,7 +22,8 @@
     "test:lint": "run-s lint:*",
     "test:unit": "lerna run test",
     "version": "lerna version --conventional-commits --create-release github",
-    "publish": "lerna publish"
+    "release": "run-s clean build test:* release:*",
+    "release:publish": "lerna publish"
   },
   "keywords": [
     "tkvw",

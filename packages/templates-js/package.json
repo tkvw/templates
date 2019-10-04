@@ -7,8 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "build": "run-s clean && run-p build:*",
-    "build:main": "tsc -p ./tsconfig.build.json",
+    "build": "tsc -p ./tsconfig.build.json",
     "clean": "trash dist",
     "test": "jest"
   },
